@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'articles#index'
 
   resources :articles do
-    resources :comments
+    resources :comments, only: [:create, :destroy], shallow: true
   end
 
 end

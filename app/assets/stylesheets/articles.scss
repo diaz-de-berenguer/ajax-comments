@@ -2,7 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.article {
+.each-article {
 	padding: 2em 0;
 	border-bottom: 1px solid #aaa;
+}
+
+.comments {
+	margin-top: 2em;
+	padding: 0 2em;
+	.comment {
+		margin-bottom: 0.5em;
+		padding: 1em 2em 0;
+		border: 1px solid #ddd;
+		position: relative;
+		.delete {
+			margin:0.5em;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
 }

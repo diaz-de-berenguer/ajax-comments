@@ -5,6 +5,13 @@
 <%= link_to 'Edit', edit_article_path, class: "btn btn-default" %>
 <%= link_to 'Delete', article_path, method: :delete, data: { confirm: "Are you sure?" } %>
 
+		<div class="comments">
+			<%= content_tag(:div, id: "comments_#{@article.id}") do %>
+				<%= render @article.comments %>
+			<% end %>
+			<%= render 'add_comment', a: @article %>
+		</div>
+
 <hr>
 
 <%= link_to articles_path do %>

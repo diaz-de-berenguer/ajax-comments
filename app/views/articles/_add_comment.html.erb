@@ -1,0 +1,6 @@
+<%= simple_form_for [a, a.comments.new], remote: true do |f| %>
+	<%= f.input :content, label: false, input_html: { id: "new_comment_#{a.id}", placeholder: "Add New Comment" } %>
+	<%= button_tag(type: 'commit', class: "btn btn-default") do %>
+		Add Comment
+	<% end %>
+<% end %>

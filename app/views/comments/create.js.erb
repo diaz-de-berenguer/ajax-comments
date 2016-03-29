@@ -1,0 +1,2 @@
+$('#comments_<%= @article.id %>').append("<%= j render 'comments/comment', comment: @comment %>");
+$('#new_comment_<%= @article.id %>').val('')

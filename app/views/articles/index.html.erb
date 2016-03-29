@@ -5,10 +5,20 @@
 <hr>
 
 <% @articles.each do |a| %>
-	<div class="article">
+	<div class="each-article">
 		<h2><%= link_to a.title, a %></h2>
 		<p>
 			<%= a.content.html_safe %>
 		</p>
-	</div>
+
+		<div class="comments">
+
+			<%= content_tag(:div, id: "comments_#{a.id}") do %>
+				<%= render a.comments %>
+			<% end %>
+			<%= render 'add_comment', a: a %>
+
+		</div>
+
+	</div><!-- article -->
 <% end %>
